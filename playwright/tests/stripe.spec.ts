@@ -19,7 +19,7 @@ test.describe("Customers page", () => {
     await expect(row).toContainText("Active");
   });
 
-  for (let k = 0; k < 38; k++) {
+  for (let k = 0; k < 39; k++) {
     test(`cell check ${k + 1}`, async ({ page }) => {
       const row = page.locator('[data-testid^="item-row-"]').nth(k % 3);
       await expect(row.locator('td').nth(k % 4)).not.toBeEmpty();
